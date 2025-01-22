@@ -20,6 +20,7 @@ public class Spawner : MonoBehaviour
         {
             Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             GameObject newThing = Instantiate(prefab, mouse, Quaternion.identity);
+
             //Instantiate(prefab, transform);
             //all prefabs appear as child of the script
 
