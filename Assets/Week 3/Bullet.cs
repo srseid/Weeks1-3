@@ -6,6 +6,8 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 5;
     public bool hasBeenFired = false;
+    
+    
     void Update()
     {
         if(hasBeenFired == true)
@@ -16,6 +18,7 @@ public class Bullet : MonoBehaviour
         {
             PointAtMouse();
         }
+        
         
     }
 

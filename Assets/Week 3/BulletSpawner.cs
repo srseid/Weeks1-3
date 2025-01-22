@@ -6,10 +6,11 @@ public class BulletSpawner : MonoBehaviour
 {
     public GameObject prefab;
     public Bullet bullet;
-
+   
     void Start()
     {
         Spawn();
+        
     }
 
     void Update()
@@ -22,6 +23,7 @@ public class BulletSpawner : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Fire();
+            
         }
     }
 
@@ -29,6 +31,7 @@ public class BulletSpawner : MonoBehaviour
     {
         GameObject spawnedBullet = Instantiate(prefab);
         bullet = spawnedBullet.GetComponent<Bullet>();
+        Destroy(spawnedBullet, 5);
     }
    
 
@@ -36,5 +39,6 @@ public class BulletSpawner : MonoBehaviour
     {
         bullet.hasBeenFired = true;
         bullet = null;
+        
     }
 }

@@ -14,9 +14,9 @@ public class TankMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.LeftArrow)) { 
-            transform.Translate(0, 0, -Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime);
+        
+            transform.Translate(Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime,0,0);
             transform.Translate(0, Input.GetAxisRaw("Vertical") * speed * Time.deltaTime, 0);
-        }
+        
     }
 }
