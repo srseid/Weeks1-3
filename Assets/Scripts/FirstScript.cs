@@ -6,9 +6,23 @@ public class FirstScript : MonoBehaviour
 {
     public float speed = 0.01f;
 
+    public SpriteRenderer spriteRenderer;
+    public Sprite[] sprites;
+    public Spawner thingThatSpawnedMe;
     // Start is called before the first frame update
     void Start()
     {
+        //spriteRenderer.color = Random.ColorHSV();
+
+        if(sprites.Length == 0)
+        {
+
+        }
+        else
+        {
+            spriteRenderer.sprite = sprites[Random.Range(0,sprites.Length)];
+            spriteRenderer.sortingOrder = -1;
+        }
         
     }
 
