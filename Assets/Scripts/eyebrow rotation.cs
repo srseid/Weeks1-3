@@ -28,14 +28,15 @@ public class eyebrowrotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(zit))
+        if(Input.GetMouseButtonDown(0))
         {
             //transform.position = Vector2.Lerp(normal.position, furrow.position, curve.Evaluate(e));
             transform.position = furrow.position;
         }
-        else
+        
+        if(Input.GetMouseButtonUp(0))
         {
-            //transform.position = normal.position;
+            transform.position = normal.position;
         }
         
 
