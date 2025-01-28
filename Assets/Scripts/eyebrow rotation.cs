@@ -6,16 +6,15 @@ using UnityEngine.UI;
 
 public class eyebrowrotation : MonoBehaviour
 {
-    [Range(0,1)] public float e;
-    public AnimationCurve curve;
-
-    
-    public Transform normal;
-    public Transform furrow;
-
-    
-
   
+    public AnimationCurve curve;
+    //ability to change position of eyebrows
+
+    public Transform normal;
+    //starting position for eyebrows, making it public to easily apply coordinates in inspector
+    public Transform furrow;
+    //ending position for eyebrows when mouse is clicked show anger.  why are you bothering her!!
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,17 +29,18 @@ public class eyebrowrotation : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            //transform.position = Vector2.Lerp(normal.position, furrow.position, curve.Evaluate(e));
+            //when mouse is clicked, make eyebrows furrow
             transform.position = furrow.position;
         }
         
         if(Input.GetMouseButtonUp(0))
         {
             transform.position = normal.position;
+            //when mouse is released, make eyebrows in normal starting position
         }
-        
 
 
-        
+
+
     }
 }
